@@ -1,8 +1,12 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 const logo = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
 
-
 const Navbar = () => {
+  const linkClass = ({ isActive }) =>
+    isActive
+      ? 'bg-black text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+      : 'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2';
     return (
         <nav className='bg-indigo-700 border-b border-indigo-500'>
           <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
